@@ -1,64 +1,46 @@
-Node Hotel Application
-The Node Hotel application is a Node.js-based system developed using the Express.js framework, with MongoDB as the chosen database. This application manages information related to persons (staff) and menu items. It exposes specific endpoints to handle CRUD (Create, Read, Update, Delete) operations for both persons and menu items.
+🍽️ Node Hotel Application
+A hotel management backend system developed using Node.js, Express.js, and MongoDB, designed to manage staff and menu items efficiently. This project was built by Muhammad Hussnain Dogar.
 
-Endpoints
-Persons
-Add a Person:
+📧 Email: hussnaindogar2006@gmail.com
 
-Endpoint: POST /person
-Description: Adds a person to the system with details such as name, role, etc.
-Get All Persons:
+🚀 Features
+Manage hotel staff (Add, View, Update, Delete)
 
-Endpoint: GET /person
-Description: Retrieves a list of all persons in the system.
-Get Persons by Work Type:
+Manage menu items (Add, View, Update, Delete)
 
-Endpoint: GET /person/:workType
-Description: Retrieves a list of persons based on their work type (e.g., chef, waiter, manager).
-Update a Person:
+Filter persons by work type (chef, waiter, manager)
 
-Endpoint: PUT /person/:id
-Description: Updates the details of a specific person identified by their ID.
-Delete a Person:
+Filter menu items by taste (sweet, spicy, sour)
 
-Endpoint: DELETE /person/:id
-Description: Deletes a person from the system based on their ID.
-Menu Items
-Add a Menu Item:
+📦 Installation
+bash
+Copy
+Edit
+git clone https://github.com/your-username/node-hotel-app.git
+cd node-hotel-app
+npm install
+🧠 Endpoints
+👤 Person (Staff)
+Method	Endpoint	Description
+POST	/person	Add a new person
+GET	/person	Get all persons
+GET	/person/:workType	Get persons by work type
+PUT	/person/:id	Update a person by ID
+DELETE	/person/:id	Delete a person by ID
 
-Endpoint: POST /menu
-Description: Adds a menu item to the system with details such as name, price, taste, etc.
-Get All Menu Items:
+🍔 Menu Items
+Method	Endpoint	Description
+POST	/menu	Add a new menu item
+GET	/menu	Get all menu items
+GET	/menu/:taste	Get menu items by taste
+PUT	/menu/:id	Update a menu item by ID
+DELETE	/menu/:id	Delete a menu item by ID
 
-Endpoint: GET /menu
-Description: Retrieves a list of all menu items in the system.
-Get Menu Items by Taste:
-
-Endpoint: GET /menu/:taste
-Description: Retrieves a list of menu items based on their taste (e.g., sweet, spicy, sour).
-Update a Menu Item:
-
-Endpoint: PUT /menu/:id
-Description: Updates the details of a specific menu item identified by its ID.
-Delete a Menu Item:
-
-Endpoint: DELETE /menu/:id
-Description: Deletes a menu item from the system based on its ID.
-Data Models
-Person
-The Person data model represents information about staff members in the hotel.
-
-Fields:
-
-name: String (Person's name)
-age: Number (Person's age)
-work: Enum (Role in the hotel, such as chef, waiter, manager)
-mobile: String (Person's mobile number)
-email: String (Person's email address, unique)
-address: String (Person's address)
-salary: Number (Person's salary)
-Example:
-
+🧾 Data Models
+🧑 Person Model
+json
+Copy
+Edit
 {
   "name": "John Doe",
   "age": 30,
@@ -68,20 +50,10 @@ Example:
   "address": "123 Main Street",
   "salary": 30000
 }
-
-Menu Item
-The MenuItem data model represents information about menu items available in the hotel.
-
-Fields:
-
-name: String (Item's name)
-price: Number (Item's price)
-taste: Enum (Item's taste, such as sweet, spicy, sour)
-is_drink: Boolean (Indicates if the item is a drink, default is false)
-ingredients: Array of Strings (List of ingredients, default is an empty array)
-num_sales: Number (Number of sales for the item, default is 0)
-Example:
-
+🍲 Menu Item Model
+json
+Copy
+Edit
 {
   "name": "Spicy Chicken Curry",
   "price": 12.99,
@@ -90,7 +62,7 @@ Example:
   "ingredients": ["chicken", "spices", "vegetables"],
   "num_sales": 50
 }
+👨‍💻 Developer
+Muhammad Hussnain Dogar
+📧 hussnaindogar2006@gmail.com
 
-Usage
-Install Dependencies:
-npm install
